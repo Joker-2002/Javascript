@@ -1,5 +1,5 @@
 /*
- THERE ARE TWO TYPES OF DATATYPES:
+ --------------------THERE ARE TWO TYPES OF DATATYPES:----------------------------====------------
   1. PRIMITIVE (call by value):----
         Generally 7 types
     i.   String ==> "123"
@@ -46,7 +46,7 @@
                     }
                     console.log(typeof myFunct);
 
-----------------Javascript is a dynamically typed language.----------
+-------------------------------------Javascript is a dynamically typed language.-----------------------------------------
 
 */
 
@@ -76,8 +76,55 @@
 // console.log(typeof Myobj);
 
 //Fuction
-let myFunct = function(){
-    console.log("HELLO WORLD")
+// let myFunct = function(){
+//     console.log("HELLO WORLD")
+// }
+// // console.log(myFunct);
+// console.log(typeof myFunct);
+
+
+
+//============================================================================================================
+/*                      ------MEMORY ALLOCATION-------
+
+1. Stack [PRIMITIVE DATATYPE]
+    //Stack: any changes in the copy changes only the copy
+        let name1 = "debasish"
+        let name2 = name1
+        name2 = "Debu"
+
+        console.log(name1);
+        console.log(name2);
+
+2. Heap [NON-PRIMITIVE DATATYPE]
+    //Heap: any changes in the copy changes the original data [as non-primitive deals with address or reference]
+        let mObj = {
+            name: "VIO",
+            email: "ktm@mail.com"
+        }
+        let mObj2 = mObj
+        mObj2.name = "DIYA"
+
+        console.log(mObj.name);
+        console.log(mObj2.name);        
+
+*/
+
+//Stack: any changes in the copy changes only the copy [as primitive gives a copy]
+let name1 = "debasish"
+let name2 = name1
+name2 = "Debu"
+
+console.log(name1);
+console.log(name2);
+
+//Heap: any changes in the copy changes the original data [as non-primitive deals with address or reference]
+let mObj = {
+    name: "VIO",
+    email: "ktm@mail.com"
 }
-// console.log(myFunct);
-console.log(typeof myFunct);
+let mObj2 = mObj
+mObj2.name = "DIYA"
+
+console.log(mObj.name);
+console.log(mObj2.name);

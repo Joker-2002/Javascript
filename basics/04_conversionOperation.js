@@ -53,5 +53,5 @@ console.log(1 + 2 + "2");
 // console.log(2 == 1);
 // console.log(2 != 1);
 these are simple which gives output as true or false.
-
+*/
 

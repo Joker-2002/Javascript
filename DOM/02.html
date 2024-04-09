@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur code</title>
+</head>
+<body style="background-color: lightslategray;color: brown;">
+    <div class="parent">
+        <div class="day" style="font-weight: bolder;">Monday</div>
+        <div class="day" style="font-weight: bolder;">Tuesday</div>
+        <div class="day" style="font-weight: bolder;">Wednesday</div>
+        <div class="day" style="font-weight: bolder;">Thursday</div>
+        <div class="day" style="font-weight: bolder;">Friday</div>
+    </div>
+</body>
+<script>
+    // way to select parent node and perform the operations
+    const papa = document.querySelector(".parent")
+    // console.log(papa);
+    // console.log(papa.childElementCount)
+    // console.log(papa.children); //HTML COLLECTION
+    // console.log(papa.children[3]);
+    // console.log(papa.children[3].innerHTML);
+
+    //to traverse all the child in the tree
+    // for (let i = 0; i < papa.children.length; i++) {
+    //     console.log(papa.children[i].innerHTML);
+        
+    // }
+
+    // papa.children[4].style.color = "black"
+    // console.log(papa.childNodes);// returns a child list along with child and text
+    // console.log(papa.lastChild);//returns the last text
+    // console.log(papa.lastElementChild);//return the last child
+
+    //if we want to select the child first and then move on to parent.
+    const batcha = document.querySelector(".day")
+    console.log(batcha);
+    console.log(batcha.parentElement);
+    console.log(batcha.parentNode);
+    console.log(batcha.nextSibling);//returns text
+    console.log(batcha.nextElementSibling);
+</script>
+</html>

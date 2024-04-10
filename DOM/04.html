@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol class="language">
+        <li>Python</li>
+    </ol>
+</body>
+<script>
+    //..............adding element.............
+    //GHISA PITA TECHNIQUE. HERE IN INNERHTML IT HAVE TO TRAVERSE THE ENTIRE LIST ITEMS.
+    function addListItem(lang) {
+        const li = document.createElement('li')
+        li.innerHTML = `${lang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addListItem('Ruby')
+    addListItem('GoLang')
+
+    //OPTIMIZED FUNCTION WHERE NO TRAVERSING IS PERFORMED.USING APPENDCHILD()
+    function addListItemOptimized(lang) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addListItemOptimized("Typescript")
+    addListItemOptimized("JavaScript")
+
+    // ..................editing element...............
+    //2. ruby must be c++
+    const second = document.querySelector("li:nth-child(2)")
+    // second.innerHTML = "C++"//1st technique
+    //2nd technique
+    const newli = document.createElement('li')
+    newli.textContent = 'C++'
+    second.replaceWith(newli)
+
+    //..........remove an element.........
+    //suppose we want to delete Typescript which is in 4th no.
+    const itemtodelete = document.querySelector('li:nth-child(4)')
+    itemtodelete.remove()
+</script>
+</html>
